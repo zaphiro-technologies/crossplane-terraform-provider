@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PROVIDER_VERSION: 0.14.1
-      TERRAFORM_VERSION: 1.7.5
+      TERRAFORM_VERSION: 1.7.4
     steps:
       - name: Checkout
         uses: actions/checkout@v4
