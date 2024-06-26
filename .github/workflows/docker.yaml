@@ -20,8 +20,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PROVIDER_VERSION: 0.14.1
-      TERRAFORM_VERSION: 1.7.4
+      PROVIDER_VERSION: 0.16.0
+      TERRAFORM_VERSION: 1.8.5
     steps:
       - name: Checkout
         uses: actions/checkout@v4
