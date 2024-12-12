@@ -22,6 +22,7 @@ jobs:
     env:
       PROVIDER_VERSION: 0.16.0
       TERRAFORM_VERSION: 1.8.5
+      KUBECTL_VERSION: 1.30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -55,3 +56,4 @@ jobs:
           build-args: |
             PROVIDER_VERSION=${{env.PROVIDER_VERSION}}
             TERRAFORM_VERSION=${{env.TERRAFORM_VERSION}}
+            KUBECTL_VERSION=${{env.KUBECTL_VERSION}}
