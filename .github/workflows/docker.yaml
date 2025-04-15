@@ -22,7 +22,7 @@ jobs:
     env:
       PROVIDER_VERSION: 0.20.1
       TERRAFORM_VERSION: 1.11.3
-      KUBECTL_VERSION: '1.30'
+      KUBECTL_VERSION: '1.31'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
