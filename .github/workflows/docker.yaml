@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PROVIDER_VERSION: 0.21.2
+      PROVIDER_VERSION: 1.0.2
       TERRAFORM_VERSION: 1.11.3
       KUBECTL_VERSION: 1.34.1
     steps:
