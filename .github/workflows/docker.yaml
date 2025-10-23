@@ -31,8 +31,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{github.repository_owner}}/crossplane-terraform-provider
-          tags:
-            type=raw,value=${{env.PROVIDER_VERSION}}-${{env.TERRAFORM_VERSION}}-${{env.KUBECTL_VERSION}}
+          tags: type=raw,value=${{env.PROVIDER_VERSION}}-${{env.TERRAFORM_VERSION}}-${{env.KUBECTL_VERSION}}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
