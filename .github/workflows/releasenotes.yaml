@@ -7,7 +7,6 @@ on:
   pull_request:
     branches: [main]
 
-
 jobs:
   release-notes:
     uses: zaphiro-technologies/github-workflows/.github/workflows/release-notes.yaml@main
