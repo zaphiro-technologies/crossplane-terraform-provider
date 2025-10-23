@@ -20,9 +20,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      PROVIDER_VERSION: 0.20.1
+      PROVIDER_VERSION: 0.21.0
       TERRAFORM_VERSION: 1.11.3
-      KUBECTL_VERSION: '1.31'
+      KUBECTL_VERSION: '1.32'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
