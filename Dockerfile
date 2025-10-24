@@ -12,6 +12,8 @@ ARG TARGETARCH
 ENV TINI_VERSION v0.19.0
 ADD --chmod=555 https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-${TARGETARCH} /sbin/tini
 
-COPY --from=terraform /bin/terraform /usr/local/bin/terraform
+ADD terraform.sh /usr/local/bin/terraform
+
+COPY --from=terraform /bin/terraform /usr/local/bin/terraform-exec
 COPY --from=kubectl /usr/local/bin/kubectl /usr/local/bin/
 ENTRYPOINT ["tini", "--", "crossplane-terraform-provider"]
