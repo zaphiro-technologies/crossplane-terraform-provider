@@ -4,6 +4,6 @@ on:
     - cron: "15 3 * * *"
   workflow_dispatch:
 jobs:
-  add-to-project:
+  manage-issues:
     uses: zaphiro-technologies/github-workflows/.github/workflows/manage-issues.yaml@main
     secrets: inherit
