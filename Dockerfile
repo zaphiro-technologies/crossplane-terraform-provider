@@ -25,6 +25,8 @@ ADD .gitconfig .gitconfig
 RUN mkdir -p ${TF_PLUGIN_CACHE_DIR} && chown -R 2000 /tf
 
 COPY --from=provider /usr/local/bin/crossplane-terraform-provider /usr/local/bin/crossplane-terraform-provider
+COPY --from=provider /package.yaml /package.yaml
+COPY --from=provider /models/ /models/
 COPY --from=terraform /bin/terraform /usr/local/bin/terraform
 COPY --from=kubectl /usr/local/bin/kubectl /usr/local/bin/
 
