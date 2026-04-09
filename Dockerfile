@@ -13,7 +13,7 @@ ARG TARGETARCH
 ENV TINI_VERSION v0.19.0
 ADD --chmod=555 https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-${TARGETARCH} /sbin/tini
 
-RUN apk --no-cache add ca-certificates bash git curl
+RUN apk --no-cache add -u zlib ca-certificates bash git curl
 
 ENV TF_IN_AUTOMATION=1
 ENV TF_PLUGIN_CACHE_DIR=/tf/plugin-cache
