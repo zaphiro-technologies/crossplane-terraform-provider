@@ -1,16 +1,16 @@
-ARG PROVIDER_VERSION
-ARG TERRAFORM_VERSION
-ARG KUBECTL_VERSION
+ARG PROVIDER_VERSION=1.1.2
+ARG TERRAFORM_VERSION=1.11.3
+ARG KUBECTL_VERSION=1.35.3
 
-FROM hashicorp/terraform:${TERRAFORM_VERSION} as terraform
-FROM alpine/kubectl:${KUBECTL_VERSION} as kubectl
-FROM xpkg.upbound.io/upbound/provider-terraform:v${PROVIDER_VERSION} as provider
+FROM hashicorp/terraform:${TERRAFORM_VERSION} AS terraform
+FROM alpine/kubectl:${KUBECTL_VERSION} AS kubectl
+FROM xpkg.upbound.io/upbound/provider-terraform:v${PROVIDER_VERSION} AS provider
 
 FROM alpine:3.23.3
 
 # Add Tini
 ARG TARGETARCH
-ENV TINI_VERSION v0.19.0
+ENV TINI_VERSION=v0.19.0
 ADD --chmod=555 https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-${TARGETARCH} /sbin/tini
 
 RUN apk --no-cache add -u zlib ca-certificates bash git curl
