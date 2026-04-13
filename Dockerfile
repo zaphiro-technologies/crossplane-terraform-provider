@@ -8,12 +8,7 @@ FROM xpkg.upbound.io/upbound/provider-terraform:v${PROVIDER_VERSION} AS provider
 
 FROM alpine:3.23.3
 
-# Add Tini
-ARG TARGETARCH
-ENV TINI_VERSION=v0.19.0
-ADD --chmod=555 https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-${TARGETARCH} /sbin/tini
-
-RUN apk --no-cache add -u zlib ca-certificates bash git curl
+RUN apk --no-cache add -u zlib ca-certificates bash git curl tini
 
 ENV TF_IN_AUTOMATION=1
 ENV TF_PLUGIN_CACHE_DIR=/tf/plugin-cache
