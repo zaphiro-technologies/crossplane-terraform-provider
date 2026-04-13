@@ -18,7 +18,7 @@ RUN apk --no-cache add -u zlib ca-certificates bash git curl
 ENV TF_IN_AUTOMATION=1
 ENV TF_PLUGIN_CACHE_DIR=/tf/plugin-cache
 
-ADD .gitconfig .gitconfig
+COPY .gitconfig .gitconfig
 
 # As of Crossplane v1.3.0 provider controllers run as UID 2000.
 # https://github.com/crossplane/crossplane/blob/v1.3.0/internal/controller/pkg/revision/deployment.go#L32
