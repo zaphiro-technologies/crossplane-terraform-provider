@@ -1,9 +1,10 @@
 # Crossplane Terraform Provider Release Notes
 
-## 0.0.1-dev - 2026-04-14
+## 0.0.1-dev - 2026-06-16
 
 ### Continuous Integration
 
+- Add 3-day Dependabot cooldown (PR #16 by @chicco785)
 - Add scheduled trigger to Project Management workflow (PR #6 by @chicco785)
 
 ### Security
