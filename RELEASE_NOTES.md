@@ -1,6 +1,6 @@
 # Crossplane Terraform Provider Release Notes
 
-## 0.0.1-dev - 2026-06-16
+## 0.0.1-dev - 2026-08-20
 
 ### Continuous Integration
 
@@ -9,6 +9,8 @@
 
 ### Security
 
+- Update provider to 1.1.5, kubectl to 1.36.2 and Alpine to 3.24.1 (PR #17 by
+  @cosimomeli)
 - Build from Alpine 3.23.3 and update provider (PR #15 by @cosimomeli)
 
 ### Dependencies
