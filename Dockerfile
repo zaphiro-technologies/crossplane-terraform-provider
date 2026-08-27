@@ -1,12 +1,12 @@
-ARG PROVIDER_VERSION=1.1.2
+ARG PROVIDER_VERSION=1.1.5
 ARG TERRAFORM_VERSION=1.11.3
-ARG KUBECTL_VERSION=1.35.3
+ARG KUBECTL_VERSION=1.36.2
 
 FROM hashicorp/terraform:${TERRAFORM_VERSION} AS terraform
 FROM alpine/kubectl:${KUBECTL_VERSION} AS kubectl
 FROM xpkg.upbound.io/upbound/provider-terraform:v${PROVIDER_VERSION} AS provider
 
-FROM alpine:3.23.3
+FROM alpine:3.24.1
 
 RUN apk --no-cache add -u zlib ca-certificates bash git curl tini
 
